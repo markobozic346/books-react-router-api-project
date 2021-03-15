@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      {console.log(data)}
+      
       {data.books &&
         data.books.map((book, index) => (
           <BookCover
