@@ -22,40 +22,28 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <h1>!lookingForBooks && leaveWebSite()</h1>
-            <input
-              onChange={(e) => setChange(e.target.value)}
-              type="text"
-              placeholde="enter keywords"
+      <h1>!lookingForBooks && leaveWebSite()</h1>
+      <input
+        onChange={(e) => setChange(e.target.value)}
+        type="text"
+        placeholde="enter keywords"
+      />
+      <button onClick={() => setKeywords(change)}>Search</button>
+
+      <div className="grid-container">
+        {/* Checks if books propertie is defined, if true maps throught books */}
+        {data.books &&
+          data.books.map((book, index) => (
+            <BookCover
+              key={index}
+              title={book.title}
+              subtitle={book.subtitle}
+              price={book.price}
+              imageUrl={book.image}
+              bookID={book.isbn13}
             />
-            <button onClick={() => setKeywords(change)}>Search</button>
-
-            <div className="grid-container">
-              {/* Checks if books propertie is defined, if true maps throught books */}
-              {data.books &&
-                data.books.map((book, index) => (
-                  <BookCover
-                    key={index}
-                    title={book.title}
-                    subtitle={book.subtitle}
-                    price={book.price}
-                    imageUrl={book.image}
-                    bookID={book.isbn13}
-                  />
-                ))}
-            </div>
-          </Route>
-          <Route exact path='/book'>
-
-          </Route>
-          <Route exact path="/book/:id">
-            <Book id='122'/>
-          </Route>
-        </Switch>
-      </Router>
+          ))}
+      </div>
     </div>
   );
 }
