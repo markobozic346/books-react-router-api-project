@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #b9eeb9;
 }
 
 
@@ -14,6 +15,13 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.grid-container{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+
 }
 
 

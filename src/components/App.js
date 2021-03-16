@@ -7,7 +7,7 @@ function App() {
   //  const [books, setBooks] = useState(data.books);
   useEffect(() => {
     async function fetchData() {
-      let response = await fetch(`/search/programming`);
+      let response = await fetch(`/search/angular`);
       setData(await response.json());
     }
     fetchData();
@@ -15,18 +15,23 @@ function App() {
 
   return (
     <div className="App">
+
+    <input type='text' placeholde="enter keywords">
       
-      {data.books &&
-        data.books.map((book, index) => (
-          <BookCover
-            key={index}
-            title={book.title}
-            subtitle={book.subtitle}
-            price={book.price}
-            imageUrl={book.image}
-            bookID={book.isbn13}
-          />
-        ))}
+      <div className="grid-container">
+        {/* Checks if books propertie is defined, if true maps throught books */}
+        {data.books &&
+          data.books.map((book, index) => (
+            <BookCover
+              key={index}
+              title={book.title}
+              subtitle={book.subtitle}
+              price={book.price}
+              imageUrl={book.image}
+              bookID={book.isbn13}
+            />
+          ))}
+      </div>
     </div>
   );
 }
