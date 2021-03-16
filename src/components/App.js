@@ -3,20 +3,27 @@ import BookCover from "./BookCover";
 import "./App.css";
 
 function App() {
+  // data from api
   const [data, setData] = useState("");
-  //  const [books, setBooks] = useState(data.books);
+  
+  // search keywoard from input 
+   const [keywords, setKeywords] = useState('new');
+   const [change, setChange] = useState('');
+
+
   useEffect(() => {
+    //fetch data from api
     async function fetchData() {
-      let response = await fetch(`/search/angular`);
+      let response = await fetch(`/search/${keywords}`);
       setData(await response.json());
     }
     fetchData();
-  }, []);
+  }, [keywords]);
 
   return (
     <div className="App">
-
-    <input type='text' placeholde="enter keywords">
+       <input onChange={e => setChange(e.target.value)} type='text' placeholde="enter keywords"/>
+       <button onClick={() => setKeywords(change)}>Search</button> 
       
       <div className="grid-container">
         {/* Checks if books propertie is defined, if true maps throught books */}
