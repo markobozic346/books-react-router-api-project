@@ -1,6 +1,6 @@
 import React from "react";
 import "./BookCover.css";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 function BookCover({ title, subtitle, imageUrl, price, bookID }) {
   return (
     <div className="book-cover">
@@ -13,8 +13,7 @@ function BookCover({ title, subtitle, imageUrl, price, bookID }) {
           price:<span className="bigger">{price}</span>
         </p>
         
-          <Link to={`/book/${bookID}` }>More Info</Link>
-        
+        <Link to={`/book/${bookID}`}>More Info</Link>
       </div>
     </div>
   );

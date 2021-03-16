@@ -5,7 +5,7 @@ const Book = () => {
     const { id } = useParams();
     return (
         <div>
-            <h1>this is book {id}page </h1>
+            <h1>mjau</h1>
         </div>
     )
 }
