@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import "./Book.css";
 const Book = () => {
+  // get user id from url
   const { id } = useParams();
-
   const [data, setData] = useState("");
 
   useEffect(() => {
@@ -49,7 +49,7 @@ const Book = () => {
           </tr>
         </tbody>
       </table>
-      {console.log(data)}
+      
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './App';
-import Book from './Book';
+import Book from './BookContainer/BookCover/Book';
 
 const Router = () => {
     return (

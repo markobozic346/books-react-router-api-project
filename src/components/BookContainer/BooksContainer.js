@@ -21,7 +21,7 @@ const BooksContainer = ({keywords}) => {
 
   return (
     
-     <div className="grid-container" onScroll={handleScroll}>
+     <div className="grid-container" >
        
     {/* Checks if books propertie is defined, if true maps throught books */}
     {data.books &&

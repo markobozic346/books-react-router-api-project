@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import BookCover from "./BookContainer/BookCover/BookCover";
+import { useState } from "react";
 import Header from "./Header";
 import "./App.css";
 import BooksContainer from "./BookContainer/BooksContainer";
