@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import BookCover from "./BookCover";
+import BookCover from "./BookContainer/BookCover/BookCover";
 import Header from "./Header";
 import "./App.css";
-import BooksContainer from "./BooksContainer";
+import BooksContainer from "./BookContainer/BooksContainer";
 
 function App() {
   // search keywoard from input
