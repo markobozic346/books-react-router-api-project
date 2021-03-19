@@ -15,6 +15,7 @@ function App() {
       <div className="search-bar">
         <input
           onChange={(e) => setChange(e.target.value)}
+          value={change}
           type="text"
           placeholde="enter keywords"
         />

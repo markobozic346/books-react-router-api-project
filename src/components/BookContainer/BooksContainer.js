@@ -2,18 +2,18 @@ import React from "react";
 import { useState, useEffect } from "react";
 import BookCover from './BookCover/BookCover'
 import "./BooksContainer.css"
+
 const BooksContainer = ({keywords}) => {
   
   // data from api
   const [data, setData] = useState("");
-
+ 
   useEffect(() => {
     //fetch data from api
     async function fetchData() {
       let response = await fetch(`/search/${keywords}`);
       setData(await response.json());
-
-     
+      
     }
     fetchData();
   }, [keywords]);
